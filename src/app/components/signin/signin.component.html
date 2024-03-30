@@ -1,0 +1,22 @@
+
+<div class="middle">
+    <p>Sign-in!</p>
+    <form name="signinForm" [formGroup]="signinForm">
+        <div class="text-xl font-bold underline p-2">
+          <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput id="email" type="text" name="email"  formControlName="email" [(ngModel)]="user.email"/>
+            </mat-form-field>
+            <br />
+  
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput id="password" type="password" name="password"  formControlName="password" [(ngModel)]="user.password" />  
+            </mat-form-field>
+            <br />
+
+            <button mat-raised-button color="accent" (click)="onSubmit()" [disabled]="!signinForm.valid" >Log-in</button>
+        </div>
+
+    </form>
+</div>
