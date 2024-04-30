@@ -1,21 +1,23 @@
 <p>test works!</p>
 
-<mat-form-field>
-  <input matInput type="text" (input)="applyFilter()" [(ngModel)]="filterKey"/>
-</mat-form-field>
-
-<ul>
-  <li *ngFor="let user of users">{{ user }}</li>
-</ul>
-
-
-<div [ngSwitch]="users.length">
-  <li *ngSwitchCase="0">No user found</li>
-  <li *ngSwitchCase="1">One user found</li>
-  <li *ngSwitchCase="2">Two users found</li>
-  <li *ngSwitchCase="3">Three users found</li>
-  <li *ngSwitchCase="4">Four users found</li>
-  <li *ngSwitchCase="5">Five users found</li>
-  <li *ngSwitchCase="6">Six users found</li>
-  <li *ngSwitchCase="7">Seven users found</li>
+<div *ngIf="false">
+  <mat-form-field appearance="outline">
+    <input matInput type="text" (input)="applyFilter()" [(ngModel)]="filterKey"/>
+  </mat-form-field>
+  <ul>
+    <li *ngFor="let user of users">{{ user }}</li>
+  </ul>
+  <div [ngSwitch]="users.length && false">
+    <li *ngSwitchCase="0">No user found</li>
+    <li *ngSwitchCase="1">One user found</li>
+    <li *ngSwitchCase="2">Two users found</li>
+    <li *ngSwitchCase="3">Three users found</li>
+    <li *ngSwitchCase="4">Four users found</li>
+    <li *ngSwitchCase="5">Five users found</li>
+    <li *ngSwitchCase="6">Six users found</li>
+    <li *ngSwitchCase="7">Seven users found</li>
+  </div>
 </div>
+
+
+

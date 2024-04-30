@@ -2,21 +2,30 @@
 <div class="middle">
     <p>Sign-in!</p>
     <form name="signinForm" [formGroup]="signinForm">
-        <div class="text-xl font-bold underline p-2">
-          <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input matInput id="email" type="text" name="email"  formControlName="email" [(ngModel)]="user.email"/>
-            </mat-form-field>
-            <br />
-  
-            <mat-form-field class="example-full-width">
-                <mat-label>Password</mat-label>
-                <input matInput id="password" type="password" name="password"  formControlName="password" [(ngModel)]="user.password" />  
-            </mat-form-field>
-            <br />
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="email" [(ngModel)]="user.email"/>
+        </mat-form-field>
+        <br />  
 
-            <button mat-raised-button color="accent" (click)="onSubmit()" [disabled]="!signinForm.valid" >Log-in</button>
-        </div>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" [(ngModel)]="user.password" />  
+        </mat-form-field>
+        <br />
 
+        <button #loginBtn id="submit-btn" mat-raised-button color="accent" (click)="onSubmit()" [disabled]="!signinForm.valid" >Log-in</button>
+        <mat-error *ngIf="errorMessage">{{errorMessage}}</mat-error>
     </form>
+
+    <br />
+
+    <div *ngIf="isLoggedIn; else loggedOut">
+        Welcome {{user.email}}, Have a nice day!.
+    </div>
+      
+    <ng-template #loggedOut>
+       Hello friend, Please login or <a href="">sign-up</a>
+    </ng-template>
+    <div *ngIf="outputEmail">You are logging with : {{outputEmail}}</div>
 </div>

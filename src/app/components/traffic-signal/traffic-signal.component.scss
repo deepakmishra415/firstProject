@@ -1,0 +1,32 @@
+.signal {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    text-align: center;
+}
+.signal-active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.bg-green {
+    background-color: green;
+}
+.bg-green-light {
+    background-color: lightgreen;
+}
+
+.bg-red {
+    background-color: red;
+}
+.bg-red-light {
+    background-color: lightcoral;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-yellow-light {
+    background-color: lightyellow;
+}

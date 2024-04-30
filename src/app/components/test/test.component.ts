@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { Observable, Observer } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -12,12 +14,14 @@ export class TestComponent implements OnInit {
   public ogUsers = ['Deepak', 'Ashish', 'Rohan', 'Ramesh', 'Mishra', 'Mehta'];
   public users:any[] = []
 
-  constructor() {
+  constructor(public userService:UserService){
+    console.log(userService.count++)
 
   }
 
   ngOnInit() {
     this.users = [...this.ogUsers]
+    
   }
 
   applyFilter() {
