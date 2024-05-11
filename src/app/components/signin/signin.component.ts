@@ -27,10 +27,10 @@ export class SigninComponent implements OnInit {
     private elementRef: ElementRef<HTMLElement>){}
 
   ngOnInit() {
-    const element = document.getElementById('submit-btn');
-    if(element){
-      element.textContent = 'This is new content.';
-    }
+    // const element = document.getElementById('submit-btn');
+    // if(element){
+    //   element.textContent = 'This is new content.';
+    // }
 
     this.signinForm = this.formBuilder.group({
       email:[null,[Validators.email]],

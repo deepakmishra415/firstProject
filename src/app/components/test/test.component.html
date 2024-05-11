@@ -1,13 +1,13 @@
-<p>test works!</p>
+<p align="center">test works!</p>
 
-<div *ngIf="false">
+<div *ngIf="true">
   <mat-form-field appearance="outline">
     <input matInput type="text" (input)="applyFilter()" [(ngModel)]="filterKey"/>
   </mat-form-field>
   <ul>
     <li *ngFor="let user of users">{{ user }}</li>
   </ul>
-  <div [ngSwitch]="users.length && false">
+  <div [ngSwitch]="users.length">
     <li *ngSwitchCase="0">No user found</li>
     <li *ngSwitchCase="1">One user found</li>
     <li *ngSwitchCase="2">Two users found</li>

@@ -12,7 +12,7 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import { TrafficSignalComponent } from './components/traffic-signal/traffic-signal.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './shared/reducers/counter';
+import { counterReducer } from './shared/store/counter.reducer';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({

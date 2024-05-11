@@ -31,7 +31,7 @@ export class TimerComponent implements OnInit {
   }
 
   resetTimer(){
-  this.router.navigateByUrl('/traffic')
+  // this.router.navigateByUrl('/traffic')
     if(this.timer != 0)
       this.timer = this.defaultTimer
   }
